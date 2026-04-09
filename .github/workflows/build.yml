@@ -118,6 +118,7 @@ jobs:
           npm install --global node-gyp@10
           npm prefix -g | % {npm config set node_gyp "$_\node_modules\node-gyp\bin\node-gyp.js"}
           node-gyp install
+          npm config set msvs_version 2022
         shell: pwsh
 
       - name: Cache node_modules
