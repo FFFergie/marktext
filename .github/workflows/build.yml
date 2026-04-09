@@ -83,6 +83,14 @@ jobs:
       - name: Build
         run: yarn build:bin
 
+      - name: Upload Unix artifacts
+        uses: actions/upload-artifact@v4
+        if: runner.os != 'Windows'
+        with:
+          name: ${{ runner.os }}-build
+          path: |
+            build/**
+
   windows:
     runs-on: windows-latest
     continue-on-error: false
@@ -147,5 +155,14 @@ jobs:
       - name: Run unit and E2E tests
         run: yarn run test
 
-      - name: Build
-        run: yarn build:bin
+      - name: Build Windows installer
+        run: yarn run release:win
+
+      - name: Upload Windows artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: |
+            build/marktext-setup.exe
+            build/marktext-ia32-win.zip
+            build/marktext-x64-win.zip
