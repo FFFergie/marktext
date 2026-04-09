@@ -59,6 +59,9 @@ export const fileSortByOptions = [{
 }]
 
 export const languageOptions = [{
+  label: '简体中文',
+  value: 'zh-CN'
+}, {
   label: 'English',
   value: 'en'
 }]

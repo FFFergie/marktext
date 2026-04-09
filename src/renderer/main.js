@@ -3,8 +3,10 @@ import VueElectron from 'vue-electron'
 import sourceMapSupport from 'source-map-support'
 import bootstrapRenderer from './bootstrap'
 import VueRouter from 'vue-router'
-import lang from 'element-ui/lib/locale/lang/en'
-import locale from 'element-ui/lib/locale'
+import VueI18n from 'vue-i18n'
+import zhCN from '../locales/zh-CN.json'
+import elementLocale from 'element-ui/lib/locale/lang/zh-CN'
+import elementLocaleInstaller from 'element-ui/lib/locale'
 import axios from './axios'
 import store from './store'
 import './assets/symbolIcon'
@@ -59,7 +61,17 @@ addElementStyle()
 // Be careful when changing code before this line!
 
 // Configure Vue
-locale.use(lang)
+Vue.use(VueI18n)
+
+const i18n = new VueI18n({
+  locale: 'zh-CN',
+  fallbackLocale: 'zh-CN',
+  messages: {
+    'zh-CN': zhCN
+  }
+})
+
+elementLocaleInstaller.use(elementLocale)
 
 Vue.use(Dialog)
 Vue.use(Form)
@@ -102,6 +114,7 @@ const router = new VueRouter({
 
 /* eslint-disable no-new */
 new Vue({
+  i18n,
   store,
   router,
   template: '<router-view class="view"></router-view>'
