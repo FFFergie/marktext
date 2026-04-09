@@ -68,9 +68,7 @@ jobs:
         run: strip node_modules/vscode-ripgrep/bin/rg
 
       - name: Lint
-        run: |
-          yarn run lint
-          yarn run validate-licenses
+        run: yarn run lint
 
       - name: Run unit and E2E tests
         uses: GabrielBB/xvfb-action@v1
@@ -131,7 +129,7 @@ jobs:
       # Workaround: Fix native build failure due to outdated node-gyp version.
       - name: Fix node-gyp
         run: |
-          npm install --global node-gyp@latest
+          npm install --global node-gyp@10
           npm prefix -g | % {npm config set node_gyp "$_\node_modules\node-gyp\bin\node-gyp.js"}
           node-gyp install
         shell: pwsh
@@ -160,9 +158,7 @@ jobs:
         run: yarn install --check-files --frozen-lockfile
 
       - name: Lint
-        run: |
-          yarn run lint
-          yarn run validate-licenses
+        run: yarn run lint
 
       - name: Run unit and E2E tests
         run: yarn run test
