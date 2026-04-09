@@ -9,58 +9,59 @@ import strikeIcon from '../../assets/pngicon/format_strike/2.png'
 import mathIcon from '../../assets/pngicon/format_math/2.png'
 import highlightIcon from '../../assets/pngicon/highlight/2.png'
 import clearIcon from '../../assets/pngicon/format_clear/2.png'
+import { t } from '../../../../renderer/i18n'
 
 const COMMAND_KEY = isOsx ? '⌘' : 'Ctrl'
 
 const icons = [
   {
     type: 'strong',
-    tooltip: 'Bold',
+    tooltip: t('muya.formatPicker.bold'),
     shortcut: `${COMMAND_KEY}+B`,
     icon: strongIcon
   }, {
     type: 'em',
-    tooltip: 'Italic',
+    tooltip: t('muya.formatPicker.italic'),
     shortcut: `${COMMAND_KEY}+I`,
     icon: emphasisIcon
   }, {
     type: 'u',
-    tooltip: 'Underline',
+    tooltip: t('muya.formatPicker.underline'),
     shortcut: `${COMMAND_KEY}+U`,
     icon: underlineIcon
   }, {
     type: 'del',
-    tooltip: 'Strikethrough',
+    tooltip: t('muya.formatPicker.strikethrough'),
     shortcut: `${COMMAND_KEY}+D`,
     icon: strikeIcon
   }, {
     type: 'mark',
-    tooltip: 'Highlight',
+    tooltip: t('muya.formatPicker.highlight'),
     shortcut: `⇧+${COMMAND_KEY}+H`,
     icon: highlightIcon
   }, {
     type: 'inline_code',
-    tooltip: 'Inline Code',
+    tooltip: t('muya.formatPicker.inlineCode'),
     shortcut: `${COMMAND_KEY}+\``,
     icon: codeIcon
   }, {
     type: 'inline_math',
-    tooltip: 'Inline Math',
+    tooltip: t('muya.formatPicker.inlineMath'),
     shortcut: `⇧+${COMMAND_KEY}+M`,
     icon: mathIcon
   }, {
     type: 'link',
-    tooltip: 'Link',
+    tooltip: t('muya.formatPicker.link'),
     shortcut: `${COMMAND_KEY}+L`,
     icon: linkIcon
   }, {
     type: 'image',
-    tooltip: 'Image',
+    tooltip: t('muya.formatPicker.image'),
     shortcut: `⇧+${COMMAND_KEY}+I`,
     icon: imageIcon
   }, {
     type: 'clear',
-    tooltip: 'Clear Formatting',
+    tooltip: t('muya.formatPicker.clearFormatting'),
     shortcut: `⇧+${COMMAND_KEY}+R`,
     icon: clearIcon
   }

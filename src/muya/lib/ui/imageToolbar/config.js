@@ -4,36 +4,37 @@ import leftIcon from '../../assets/pngicon/algin_left/2.png'
 import middleIcon from '../../assets/pngicon/algin_center/2.png'
 import rightIcon from '../../assets/pngicon/algin_right/2.png'
 import deleteIcon from '../../assets/pngicon/image_delete/2.png'
+import { t } from '../../../../renderer/i18n'
 
 const icons = [
   {
     type: 'edit',
-    tooltip: 'Edit Image',
+    tooltip: t('muya.imageToolbar.editImage'),
     icon: editIcon
   },
   {
     type: 'inline',
-    tooltip: 'Inline Image',
+    tooltip: t('muya.imageToolbar.inlineImage'),
     icon: inlineIcon
   },
   {
     type: 'left',
-    tooltip: 'Align Left',
+    tooltip: t('muya.imageToolbar.alignLeft'),
     icon: leftIcon
   },
   {
     type: 'center',
-    tooltip: 'Align Middle',
+    tooltip: t('muya.imageToolbar.alignMiddle'),
     icon: middleIcon
   },
   {
     type: 'right',
-    tooltip: 'Align Right',
+    tooltip: t('muya.imageToolbar.alignRight'),
     icon: rightIcon
   },
   {
     type: 'delete',
-    tooltip: 'Remove Image',
+    tooltip: t('muya.imageToolbar.removeImage'),
     icon: deleteIcon
   }
 ]

@@ -4,6 +4,7 @@ import deleteIcon from '../../assets/pngicon/delete/2.png'
 import turnIcon from '../../assets/pngicon/turninto/2.png'
 import { isOsx } from '../../config'
 import { quickInsertObj } from '../quickInsert/config'
+import { t } from '../../../../renderer/i18n'
 
 const wholeSubMenu = Object.keys(quickInsertObj).reduce((acc, key) => {
   const items = quickInsertObj[key]
@@ -15,21 +16,21 @@ const COMMAND_KEY = isOsx ? '⌘' : '⌃'
 export const menu = [{
   icon: copyIcon,
   label: 'duplicate',
-  text: 'Duplicate',
+  text: t('muya.frontMenu.duplicate'),
   shortCut: `⇧${COMMAND_KEY}P`
 }, {
   icon: turnIcon,
   label: 'turnInto',
-  text: 'Turn Into'
+  text: t('muya.frontMenu.turnInto')
 }, {
   icon: newIcon,
   label: 'new',
-  text: 'New Paragraph',
+  text: t('muya.frontMenu.newParagraph'),
   shortCut: `⇧${COMMAND_KEY}N`
 }, {
   icon: deleteIcon,
   label: 'delete',
-  text: 'Delete',
+  text: t('muya.frontMenu.delete'),
   shortCut: `⇧${COMMAND_KEY}D`
 }]
 

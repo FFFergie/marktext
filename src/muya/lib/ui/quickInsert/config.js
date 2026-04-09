@@ -21,6 +21,7 @@ import plantumlIcon from '../../assets/pngicon/plantuml/2.png'
 import mermaidIcon from '../../assets/pngicon/mermaid/2.png'
 import vegaIcon from '../../assets/pngicon/chart/2.png'
 import { isOsx } from '../../config'
+import { t } from '../../../../renderer/i18n'
 
 const COMMAND_KEY = isOsx ? '⌘' : 'Ctrl'
 const OPTION_KEY = isOsx ? '⌥' : 'Alt'
@@ -35,134 +36,134 @@ const SHIFT_KEY = isOsx ? '⇧' : 'Shift'
 
 export const quickInsertObj = {
   'basic block': [{
-    title: 'Paragraph',
+    title: t('muya.quickInsert.paragraph'),
     subTitle: 'Lorem Ipsum is simply dummy text',
     label: 'paragraph',
     shortCut: `${COMMAND_KEY}+0`,
     icon: paragraphIcon
   }, {
-    title: 'Horizontal Line',
+    title: t('muya.quickInsert.horizontalLine'),
     subTitle: '---',
     label: 'hr',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+-`,
     icon: hrIcon
   }, {
-    title: 'Front Matter',
+    title: t('muya.quickInsert.frontMatter'),
     subTitle: '--- Lorem Ipsum ---',
     label: 'front-matter',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Y`,
     icon: frontMatterIcon
   }],
   header: [{
-    title: 'Header 1',
+    title: t('muya.quickInsert.header1'),
     subTitle: '# Lorem Ipsum is simply ...',
     label: 'heading 1',
     shortCut: `${COMMAND_KEY}+1`,
     icon: header1Icon
   }, {
-    title: 'Header 2',
+    title: t('muya.quickInsert.header2'),
     subTitle: '## Lorem Ipsum is simply ...',
     label: 'heading 2',
     shortCut: `${COMMAND_KEY}+2`,
     icon: header2Icon
   }, {
-    title: 'Header 3',
+    title: t('muya.quickInsert.header3'),
     subTitle: '### Lorem Ipsum is simply ...',
     label: 'heading 3',
     shortCut: `${COMMAND_KEY}+3`,
     icon: header3Icon
   }, {
-    title: 'Header 4',
+    title: t('muya.quickInsert.header4'),
     subTitle: '#### Lorem Ipsum is simply ...',
     label: 'heading 4',
     shortCut: `${COMMAND_KEY}+4`,
     icon: header4Icon
   }, {
-    title: 'Header 5',
+    title: t('muya.quickInsert.header5'),
     subTitle: '##### Lorem Ipsum is simply ...',
     label: 'heading 5',
     shortCut: `${COMMAND_KEY}+5`,
     icon: header5Icon
   }, {
-    title: 'Header 6',
+    title: t('muya.quickInsert.header6'),
     subTitle: '###### Lorem Ipsum is simply ...',
     label: 'heading 6',
     shortCut: `${COMMAND_KEY}+6`,
     icon: header6Icon
   }],
   'advanced block': [{
-    title: 'Table Block',
+    title: t('muya.quickInsert.tableBlock'),
     subTitle: '|Lorem | Ipsum is simply |',
     label: 'table',
     shortCut: `${SHIFT_KEY}+${COMMAND_KEY}+T`,
     icon: newTableIcon
   }, {
-    title: 'Display Math',
+    title: t('muya.quickInsert.displayMath'),
     subTitle: '$$ Lorem Ipsum is simply $$',
     label: 'mathblock',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+M`,
     icon: mathblockIcon
   }, {
-    title: 'HTML Block',
+    title: t('muya.quickInsert.htmlBlock'),
     subTitle: '<div> Lorem Ipsum is simply </div>',
     label: 'html',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+J`,
     icon: htmlIcon
   }, {
-    title: 'Code Block',
+    title: t('muya.quickInsert.codeBlock'),
     subTitle: '```java Lorem Ipsum is simply ```',
     label: 'pre',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+C`,
     icon: codeIcon
   }, {
-    title: 'Quote Block',
+    title: t('muya.quickInsert.quoteBlock'),
     subTitle: '>Lorem Ipsum is simply ...',
     label: 'blockquote',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Q`,
     icon: quoteIcon
   }],
   'list block': [{
-    title: 'Order List',
+    title: t('muya.quickInsert.orderList'),
     subTitle: '1. Lorem Ipsum is simply ...',
     label: 'ol-order',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+O`,
     icon: orderListIcon
   }, {
-    title: 'Bullet List',
+    title: t('muya.quickInsert.bulletList'),
     subTitle: '- Lorem Ipsum is simply ...',
     label: 'ul-bullet',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+U`,
     icon: bulletListIcon
   }, {
-    title: 'To-do List',
+    title: t('muya.quickInsert.todoList'),
     subTitle: '- [x] Lorem Ipsum is simply ...',
     label: 'ul-task',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+X`,
     icon: todoListIcon
   }],
   diagram: [{
-    title: 'Vega Chart',
-    subTitle: 'Render flow chart by vega-lite.js.',
+    title: t('muya.quickInsert.vegaChart'),
+    subTitle: t('muya.quickInsert.renderFlowChartByVegaLiteJs'),
     label: 'vega-lite',
     icon: vegaIcon
   }, {
-    title: 'Flow Chart',
-    subTitle: 'Render flow chart by flowchart.js.',
+    title: t('muya.quickInsert.flowChart'),
+    subTitle: t('muya.quickInsert.renderFlowChartByFlowchartJs'),
     label: 'flowchart',
     icon: flowchartIcon
   }, {
-    title: 'Sequence Diagram',
-    subTitle: 'Render sequence diagram by js-sequence.',
+    title: t('muya.quickInsert.sequenceDiagram'),
+    subTitle: t('muya.quickInsert.renderSequenceDiagramByJsSequence'),
     label: 'sequence',
     icon: sequenceIcon
   }, {
-    title: 'PlantUML Diagram',
-    subTitle: 'Render PlantUML diagrams',
+    title: t('muya.quickInsert.plantUmlDiagram'),
+    subTitle: t('muya.quickInsert.renderPlantUmlDiagrams'),
     label: 'plantuml',
     icon: plantumlIcon
   }, {
-    title: 'Mermaid',
-    subTitle: 'Render Diagram by mermaid.',
+    title: t('muya.quickInsert.mermaid'),
+    subTitle: t('muya.quickInsert.renderDiagramByMermaid'),
     label: 'mermaid',
     icon: mermaidIcon
   }]

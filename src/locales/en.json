@@ -584,6 +584,101 @@
       "styled": "Styled"
     }
   },
+  "muya": {
+    "imageSelector": {
+      "selectTab": "Select",
+      "embedLinkTab": "Embed link",
+      "unsplashTab": "Unsplash",
+      "chooseImage": "Choose an Image",
+      "chooseImageDesc": "Choose image from your computer.",
+      "altText": "Alt text",
+      "imageLinkOrLocalPath": "Image link or local path",
+      "imageTitle": "Image title",
+      "embedImage": "Embed Image",
+      "pasteWebImageOrLocalPathUse": "Paste web image or local image path. Use ",
+      "simpleMode": "simple mode",
+      "fullMode": "full mode",
+      "searchPhotosOnUnsplash": "Search photos on Unsplash",
+      "noResult": "No result...",
+      "by": "By ",
+      "searchForMorePhotos": "Search for more photos..."
+    },
+    "imageToolbar": {
+      "editImage": "Edit Image",
+      "inlineImage": "Inline Image",
+      "alignLeft": "Align Left",
+      "alignMiddle": "Align Middle",
+      "alignRight": "Align Right",
+      "removeImage": "Remove Image"
+    },
+    "formatPicker": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "highlight": "Highlight",
+      "inlineCode": "Inline Code",
+      "inlineMath": "Inline Math",
+      "link": "Link",
+      "image": "Image",
+      "clearFormatting": "Clear Formatting"
+    },
+    "quickInsert": {
+      "paragraph": "Paragraph",
+      "horizontalLine": "Horizontal Line",
+      "frontMatter": "Front Matter",
+      "header1": "Header 1",
+      "header2": "Header 2",
+      "header3": "Header 3",
+      "header4": "Header 4",
+      "header5": "Header 5",
+      "header6": "Header 6",
+      "tableBlock": "Table Block",
+      "displayMath": "Display Math",
+      "htmlBlock": "HTML Block",
+      "codeBlock": "Code Block",
+      "quoteBlock": "Quote Block",
+      "orderList": "Order List",
+      "bulletList": "Bullet List",
+      "todoList": "To-do List",
+      "vegaChart": "Vega Chart",
+      "flowChart": "Flow Chart",
+      "sequenceDiagram": "Sequence Diagram",
+      "plantUmlDiagram": "PlantUML Diagram",
+      "mermaid": "Mermaid",
+      "renderFlowChartByVegaLiteJs": "Render flow chart by vega-lite.js.",
+      "renderFlowChartByFlowchartJs": "Render flow chart by flowchart.js.",
+      "renderSequenceDiagramByJsSequence": "Render sequence diagram by js-sequence.",
+      "renderPlantUmlDiagrams": "Render PlantUML diagrams",
+      "renderDiagramByMermaid": "Render Diagram by mermaid.",
+      "noResult": "No result"
+    },
+    "tableToolBar": {
+      "resizeTable": "Resize Table",
+      "alignLeft": "Align Left",
+      "alignCenter": "Align Center",
+      "alignRight": "Align Right",
+      "deleteTable": "Delete Table"
+    },
+    "frontMenu": {
+      "duplicate": "Duplicate",
+      "turnInto": "Turn Into",
+      "newParagraph": "New Paragraph",
+      "delete": "Delete"
+    },
+    "footnoteTool": {
+      "notFound": "Can't find footnote with syntax [^abc]:",
+      "inputDefinition": "Input the footnote definition...",
+      "goTo": "Go to",
+      "create": "Create"
+    },
+    "codePicker": {
+      "noResult": "No result"
+    },
+    "copyButton": {
+      "copyContent": "Copy content"
+    }
+  },
   "notification": {
     "uploadImageTitle": "Upload Image",
     "unableToSwitchLanguage": "Unable to switch to language \"{languageCode}\". Requested language dictionary is missing.",

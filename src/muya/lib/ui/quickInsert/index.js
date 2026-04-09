@@ -3,6 +3,7 @@ import { patch, h } from '../../parser/render/snabbdom'
 import { deepCopy } from '../../utils'
 import BaseScrollFloat from '../baseScrollFloat'
 import { quickInsertObj } from './config'
+import { t } from '../../../../renderer/i18n'
 import './index.css'
 
 class QuickInsert extends BaseScrollFloat {
@@ -79,7 +80,7 @@ class QuickInsert extends BaseScrollFloat {
       })
 
     if (children.length === 0) {
-      children = h('div.no-result', 'No result')
+      children = h('div.no-result', t('muya.quickInsert.noResult'))
     }
     const vnode = h('div', children)
 

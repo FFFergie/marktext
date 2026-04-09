@@ -6,26 +6,27 @@ import AlignLeftIcon from '../../../assets/pngicon/algin_left/2.png'
 import AlignRightIcon from '../../../assets/pngicon/algin_right/2.png'
 import AlignCenterIcon from '../../../assets/pngicon/algin_center/2.png'
 import DeleteIcon from '../../../assets/pngicon/table_delete/2.png'
+import { t } from '../../../../../renderer/i18n'
 
 export const TABLE_TOOLS = Object.freeze([{
   label: 'table',
-  title: 'Resize Table',
+  title: t('muya.tableToolBar.resizeTable'),
   icon: TableIcon
 }, {
   label: 'left',
-  title: 'Align Left',
+  title: t('muya.tableToolBar.alignLeft'),
   icon: AlignLeftIcon
 }, {
   label: 'center',
-  title: 'Align Center',
+  title: t('muya.tableToolBar.alignCenter'),
   icon: AlignCenterIcon
 }, {
   label: 'right',
-  title: 'Align Right',
+  title: t('muya.tableToolBar.alignRight'),
   icon: AlignRightIcon
 }, {
   label: 'delete',
-  title: 'Delete Table',
+  title: t('muya.tableToolBar.deleteTable'),
   icon: DeleteIcon
 }])
 

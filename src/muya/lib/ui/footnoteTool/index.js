@@ -1,6 +1,7 @@
 import BaseFloat from '../baseFloat'
 import { patch, h } from '../../parser/render/snabbdom'
 import WarningIcon from '../../assets/pngicon/warning/2.png'
+import { t } from '../../../../renderer/i18n'
 
 import './index.css'
 
@@ -98,13 +99,13 @@ class LinkTools extends BaseFloat {
       }
     }, ''))
     const iconWrapper = h(iconWrapperSelector, icon)
-    let text = 'Can\'t find footnote with syntax [^abc]:'
+    let text = t('muya.footnoteTool.notFound')
     if (hasFootnote) {
       const footnoteBlock = footnotes.get(identifier)
 
       text = getFootnoteText(footnoteBlock)
       if (!text) {
-        text = 'Input the footnote definition...'
+        text = t('muya.footnoteTool.inputDefinition')
       }
     }
     const textNode = h('span.text', text)
@@ -114,7 +115,7 @@ class LinkTools extends BaseFloat {
           this.buttonClick(event, hasFootnote)
         }
       }
-    }, hasFootnote ? 'Go to' : 'Create')
+    }, hasFootnote ? t('muya.footnoteTool.goTo') : t('muya.footnoteTool.create'))
     const children = [textNode, button]
     if (!hasFootnote) {
       children.unshift(iconWrapper)

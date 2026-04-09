@@ -584,6 +584,101 @@
       "styled": "样式化"
     }
   },
+  "muya": {
+    "imageSelector": {
+      "selectTab": "选择",
+      "embedLinkTab": "嵌入链接",
+      "unsplashTab": "Unsplash",
+      "chooseImage": "选择图片",
+      "chooseImageDesc": "从电脑中选择图片。",
+      "altText": "替代文本",
+      "imageLinkOrLocalPath": "图片链接或本地路径",
+      "imageTitle": "图片标题",
+      "embedImage": "嵌入图片",
+      "pasteWebImageOrLocalPathUse": "粘贴网络图片或本地图片路径。使用 ",
+      "simpleMode": "简洁模式",
+      "fullMode": "完整模式",
+      "searchPhotosOnUnsplash": "在 Unsplash 上搜索图片",
+      "noResult": "无结果...",
+      "by": "作者：",
+      "searchForMorePhotos": "搜索更多图片..."
+    },
+    "imageToolbar": {
+      "editImage": "编辑图片",
+      "inlineImage": "行内图片",
+      "alignLeft": "左对齐",
+      "alignMiddle": "居中对齐",
+      "alignRight": "右对齐",
+      "removeImage": "移除图片"
+    },
+    "formatPicker": {
+      "bold": "加粗",
+      "italic": "斜体",
+      "underline": "下划线",
+      "strikethrough": "删除线",
+      "highlight": "高亮",
+      "inlineCode": "行内代码",
+      "inlineMath": "行内公式",
+      "link": "链接",
+      "image": "图片",
+      "clearFormatting": "清除格式"
+    },
+    "quickInsert": {
+      "paragraph": "段落",
+      "horizontalLine": "分隔线",
+      "frontMatter": "前置元数据",
+      "header1": "标题 1",
+      "header2": "标题 2",
+      "header3": "标题 3",
+      "header4": "标题 4",
+      "header5": "标题 5",
+      "header6": "标题 6",
+      "tableBlock": "表格",
+      "displayMath": "数学公式",
+      "htmlBlock": "HTML 块",
+      "codeBlock": "代码块",
+      "quoteBlock": "引用块",
+      "orderList": "有序列表",
+      "bulletList": "无序列表",
+      "todoList": "任务列表",
+      "vegaChart": "Vega 图表",
+      "flowChart": "流程图",
+      "sequenceDiagram": "时序图",
+      "plantUmlDiagram": "PlantUML 图",
+      "mermaid": "Mermaid 图",
+      "renderFlowChartByVegaLiteJs": "使用 vega-lite.js 渲染流程图。",
+      "renderFlowChartByFlowchartJs": "使用 flowchart.js 渲染流程图。",
+      "renderSequenceDiagramByJsSequence": "使用 js-sequence 渲染时序图。",
+      "renderPlantUmlDiagrams": "渲染 PlantUML 图",
+      "renderDiagramByMermaid": "使用 Mermaid 渲染图表。",
+      "noResult": "无结果"
+    },
+    "tableToolBar": {
+      "resizeTable": "调整表格大小",
+      "alignLeft": "左对齐",
+      "alignCenter": "居中对齐",
+      "alignRight": "右对齐",
+      "deleteTable": "删除表格"
+    },
+    "frontMenu": {
+      "duplicate": "复制",
+      "turnInto": "转换为",
+      "newParagraph": "新建段落",
+      "delete": "删除"
+    },
+    "footnoteTool": {
+      "notFound": "找不到语法为 [^abc] 的脚注：",
+      "inputDefinition": "输入脚注定义...",
+      "goTo": "跳转",
+      "create": "创建"
+    },
+    "codePicker": {
+      "noResult": "无结果"
+    },
+    "copyButton": {
+      "copyContent": "复制内容"
+    }
+  },
   "notification": {
     "uploadImageTitle": "上传图片",
     "unableToSwitchLanguage": "无法切换到语言 \"{languageCode}\"。缺少该语言词典。",

@@ -4,6 +4,7 @@ import { patch, h } from '../../parser/render/snabbdom'
 import { EVENT_KEYS, URL_REG, isWin } from '../../config'
 import { getUniqueId, getImageInfo as getImageSrc } from '../../utils'
 import { getImageInfo } from '../../utils/getImageInfo'
+import { t } from '../../../../renderer/i18n'
 
 import './index.css'
 
@@ -297,16 +298,16 @@ class ImageSelector extends BaseFloat {
 
   renderHeader () {
     const tabs = [{
-      label: 'Select',
+      label: t('muya.imageSelector.selectTab'),
       value: 'select'
     }, {
-      label: 'Embed link',
+      label: t('muya.imageSelector.embedLinkTab'),
       value: 'link'
     }]
 
     if (this.unsplash) {
       tabs.push({
-        label: 'Unsplash',
+        label: t('muya.imageSelector.unsplashTab'),
         value: 'unsplash'
       })
     }
@@ -337,13 +338,13 @@ class ImageSelector extends BaseFloat {
               this.handleSelectButtonClick()
             }
           }
-        }, 'Choose an Image'),
-        h('span.description', 'Choose image from your computer.')
+        }, t('muya.imageSelector.chooseImage')),
+        h('span.description', t('muya.imageSelector.chooseImageDesc'))
       ]
     } else if (tab === 'link') {
       const altInput = h('input.alt', {
         props: {
-          placeholder: 'Alt text',
+          placeholder: t('muya.imageSelector.altText'),
           value: alt
         },
         on: {
@@ -360,7 +361,7 @@ class ImageSelector extends BaseFloat {
       })
       const srcInput = h('input.src', {
         props: {
-          placeholder: 'Image link or local path',
+          placeholder: t('muya.imageSelector.imageLinkOrLocalPath'),
           value: src
         },
         on: {
@@ -380,7 +381,7 @@ class ImageSelector extends BaseFloat {
       })
       const titleInput = h('input.title', {
         props: {
-          placeholder: 'Image title',
+          placeholder: t('muya.imageSelector.imageTitle'),
           value: title
         },
         on: {
@@ -406,22 +407,22 @@ class ImageSelector extends BaseFloat {
             this.handleLinkButtonClick()
           }
         }
-      }, 'Embed Image')
+      }, t('muya.imageSelector.embedImage'))
       const bottomDes = h('span.description', [
-        h('span', 'Paste web image or local image path. Use '),
+        h('span', t('muya.imageSelector.pasteWebImageOrLocalPathUse')),
         h('a', {
           on: {
             click: event => {
               this.toggleMode()
             }
           }
-        }, `${isFullMode ? 'simple mode' : 'full mode'}.`)
+        }, `${isFullMode ? t('muya.imageSelector.simpleMode') : t('muya.imageSelector.fullMode')}.`)
       ])
       bodyContent = [inputWrapper, embedButton, bottomDes]
     } else {
       const searchInput = h('input.search', {
         props: {
-          placeholder: 'Search photos on Unsplash'
+          placeholder: t('muya.imageSelector.searchPhotosOnUnsplash')
         },
         on: {
           keydown: (event) => {
@@ -439,7 +440,7 @@ class ImageSelector extends BaseFloat {
         const loadingCom = h('div.ag-plugin-loading')
         bodyContent.push(loadingCom)
       } else if (this.photoList.length === 0) {
-        const noDataCom = h('div.no-data', 'No result...')
+        const noDataCom = h('div.no-data', t('muya.imageSelector.noResult'))
         bodyContent.push(noDataCom)
       } else {
         const photos = this.photoList.map(photo => {
@@ -469,7 +470,7 @@ class ImageSelector extends BaseFloat {
             }
           }))
 
-          const desCom = h('div.des', ['By ', h('a', {
+          const desCom = h('div.des', [t('muya.imageSelector.by'), h('a', {
             props: {
               href: photo.links.html
             },
@@ -484,7 +485,7 @@ class ImageSelector extends BaseFloat {
           return h('div.photo', [imageWrapper, desCom])
         })
         const photoWrapper = h('div.photos-wrapper', photos)
-        const moreCom = h('div.more', 'Search for more photos...')
+        const moreCom = h('div.more', t('muya.imageSelector.searchForMorePhotos'))
         bodyContent.push(photoWrapper, moreCom)
       }
     }
