@@ -1,4 +1,5 @@
 import * as contextMenu from './actions'
+import { t } from '@/i18n'
 
 // NOTE: This are mutable fields that may change at runtime.
 
@@ -7,7 +8,7 @@ export const SEPARATOR = {
 }
 
 export const NEW_FILE = {
-  label: 'New File',
+  label: t('common.newFile'),
   id: 'newFileMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.newFile()
@@ -15,7 +16,7 @@ export const NEW_FILE = {
 }
 
 export const NEW_DIRECTORY = {
-  label: 'New Directory',
+  label: t('contextMenu.newDirectory'),
   id: 'newDirectoryMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.newDirectory()
@@ -23,7 +24,7 @@ export const NEW_DIRECTORY = {
 }
 
 export const COPY = {
-  label: 'Copy',
+  label: t('contextMenu.copy'),
   id: 'copyMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.copy()
@@ -31,7 +32,7 @@ export const COPY = {
 }
 
 export const CUT = {
-  label: 'Cut',
+  label: t('contextMenu.cut'),
   id: 'cutMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.cut()
@@ -39,7 +40,7 @@ export const CUT = {
 }
 
 export const PASTE = {
-  label: 'Paste',
+  label: t('contextMenu.paste'),
   id: 'pasteMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.paste()
@@ -47,7 +48,7 @@ export const PASTE = {
 }
 
 export const RENAME = {
-  label: 'Rename',
+  label: t('contextMenu.rename'),
   id: 'renameMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.rename()
@@ -55,7 +56,7 @@ export const RENAME = {
 }
 
 export const DELETE = {
-  label: 'Move To Trash',
+  label: t('contextMenu.moveToTrash'),
   id: 'deleteMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.remove()
@@ -63,7 +64,7 @@ export const DELETE = {
 }
 
 export const SHOW_IN_FOLDER = {
-  label: 'Show In Folder',
+  label: t('contextMenu.showInFolder'),
   id: 'showInFolderMenuItem',
   click (menuItem, browserWindow) {
     contextMenu.showInFolder()

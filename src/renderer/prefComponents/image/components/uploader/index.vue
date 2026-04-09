@@ -1,66 +1,62 @@
 <template>
   <div class="pref-image-uploader">
-    <h5>Uploader</h5>
+    <h5>{{ $t('pref.image.uploader.title') }}</h5>
     <section class="current-uploader">
-      <div v-if="isValidUploaderService(currentUploader)">The current image uploader is
-        {{ getServiceNameById(currentUploader) }}.</div>
-      <span v-else>Currently no uploader is selected. Please select an uploader and config
-        it.</span>
+      <div v-if="isValidUploaderService(currentUploader)">{{ $t('pref.image.uploader.currentUploaderIs', { name: getServiceNameById(currentUploader) }) }}</div>
+      <span v-else>{{ $t('pref.image.uploader.noUploaderSelected') }}</span>
     </section>
     <section class="configration">
       <cur-select :value="currentUploader" :options="uploaderOptions"
         :onChange="value => setCurrentUploader(value)"></cur-select>
       <div class="picgo" v-if="currentUploader === 'picgo'">
         <div v-if="!picgoExists" class="warning">
-          Your system does not have <span class="link"
+          {{ $t('pref.image.uploader.picgoMissingPrefix') }}<span class="link"
             @click="open('https://github.com/PicGo/PicGo-Core')">picgo</span> installed, please
-          install it before use.
+          {{ $t('pref.image.uploader.picgoMissingSuffix') }}
         </div>
       </div>
       <div class="github" v-if="currentUploader === 'github'">
-        <div class="warning">Github will be removed in a future version, please use picgo</div>
+        <div class="warning">{{ $t('pref.image.uploader.githubDeprecated') }}</div>
         <div class="form-group">
           <div class="label">
-            GitHub token:
+            {{ $t('pref.image.uploader.githubToken') }}
             <el-tooltip class="item" effect="dark"
-              content="The token is saved by Keychain on macOS, Secret Service API/libsecret on Linux and Credential Vault on Windows"
+              :content="$t('pref.image.uploader.tokenStorageNotice')"
               placement="top-start">
               <i class="el-icon-info"></i>
             </el-tooltip>
           </div>
-          <el-input v-model="githubToken" placeholder="Input token" size="mini"></el-input>
+          <el-input v-model="githubToken" :placeholder="$t('pref.image.uploader.inputToken')" size="mini"></el-input>
         </div>
         <div class="form-group">
-          <div class="label">Owner name:</div>
-          <el-input v-model="github.owner" placeholder="owner" size="mini"></el-input>
+          <div class="label">{{ $t('pref.image.uploader.ownerName') }}</div>
+          <el-input v-model="github.owner" :placeholder="$t('pref.image.uploader.ownerPlaceholder')" size="mini"></el-input>
         </div>
         <div class="form-group">
-          <div class="label">Repo name:</div>
-          <el-input v-model="github.repo" placeholder="repo" size="mini"></el-input>
+          <div class="label">{{ $t('pref.image.uploader.repoName') }}</div>
+          <el-input v-model="github.repo" :placeholder="$t('pref.image.uploader.repoPlaceholder')" size="mini"></el-input>
         </div>
         <div class="form-group">
-          <div class="label">Branch name (optional):</div>
-          <el-input v-model="github.branch" placeholder="branch" size="mini"></el-input>
+          <div class="label">{{ $t('pref.image.uploader.branchNameOptional') }}</div>
+          <el-input v-model="github.branch" :placeholder="$t('pref.image.uploader.branchPlaceholder')" size="mini"></el-input>
         </div>
         <legal-notices-checkbox class="github"
           :class="[{ 'error': legalNoticesErrorStates.github }]"
           :uploaderService="uploadServices.github"></legal-notices-checkbox>
         <div class="form-group">
-          <el-button size="mini" :disabled="githubDisable" @click="save('github')">Save
+          <el-button size="mini" :disabled="githubDisable" @click="save('github')">{{ $t('common.save') }}
           </el-button>
         </div>
       </div>
       <div class="script" v-else-if="currentUploader === 'cliScript'">
-        <div class="description">The script will be executed with the image file path as its only
-          argument and it should output any valid value for the <code>src</code> attribute of a
-          <em>HTMLImageElement</em>.
+        <div class="description">{{ $t('pref.image.uploader.scriptDescription') }}
         </div>
         <div class="form-group">
-          <div class="label">Shell script location:</div>
-          <el-input v-model="cliScript" placeholder="Script absolute path" size="mini"></el-input>
+          <div class="label">{{ $t('pref.image.uploader.shellScriptLocation') }}</div>
+          <el-input v-model="cliScript" :placeholder="$t('pref.image.uploader.scriptPathPlaceholder')" size="mini"></el-input>
         </div>
         <div class="form-group">
-          <el-button size="mini" :disabled="cliScriptDisable" @click="save('cliScript')">Save
+          <el-button size="mini" :disabled="cliScriptDisable" @click="save('cliScript')">{{ $t('common.save') }}
           </el-button>
         </div>
       </div>
@@ -191,8 +187,8 @@ export default {
         })
       }
       notice.notify({
-        title: 'Save Config',
-        message: type === 'github' ? 'The Github configration has been saved.' : 'The command line script configuration has been saved',
+        title: this.$t('pref.image.uploader.saveConfigTitle'),
+        message: type === 'github' ? this.$t('pref.image.uploader.githubConfigSaved') : this.$t('pref.image.uploader.scriptConfigSaved'),
         type: 'primary'
       })
     },

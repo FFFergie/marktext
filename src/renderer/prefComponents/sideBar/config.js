@@ -5,41 +5,42 @@ import ThemeIcon from '@/assets/icons/pref_theme.svg'
 import ImageIcon from '@/assets/icons/pref_image.svg'
 import SpellIcon from '@/assets/icons/pref_spellcheck.svg'
 import KeyBindingIcon from '@/assets/icons/pref_key_binding.svg'
+import { t } from '@/i18n'
 
 import preferences from '../../../main/preferences/schema'
 
 export const category = [{
-  name: 'General',
+  name: t('pref.general.title'),
   label: 'general',
   icon: GeneralIcon,
   path: '/preference/general'
 }, {
-  name: 'Editor',
+  name: t('pref.editor.title'),
   label: 'editor',
   icon: EditorIcon,
   path: '/preference/editor'
 }, {
-  name: 'Markdown',
+  name: t('pref.markdown.title'),
   label: 'markdown',
   icon: MarkdownIcon,
   path: '/preference/markdown'
 }, {
-  name: 'Spelling',
+  name: t('pref.spellchecker.title'),
   label: 'spelling',
   icon: SpellIcon,
   path: '/preference/spelling'
 }, {
-  name: 'Theme',
+  name: t('pref.theme.title'),
   label: 'theme',
   icon: ThemeIcon,
   path: '/preference/theme'
 }, {
-  name: 'Image',
+  name: t('pref.image.title'),
   label: 'image',
   icon: ImageIcon,
   path: '/preference/image'
 }, {
-  name: 'Key Bindings',
+  name: t('pref.keybindings.title'),
   label: 'keybindings',
   icon: KeyBindingIcon,
   path: '/preference/keybindings'

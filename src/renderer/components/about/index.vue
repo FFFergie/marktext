@@ -33,9 +33,9 @@ import MarkTextLogo from '../../assets/images/logo.png'
 
 export default {
   data () {
-    this.name = 'MarkText'
-    this.copyright = `Copyright © 2017-${new Date().getFullYear()} Luo Ran`
-    this.copyrightContributors = `Copyright © 2018-${new Date().getFullYear()} MarkText Contributors`
+    this.name = this.$t('about.name')
+    this.copyright = this.$t('about.copyright', { year: new Date().getFullYear() })
+    this.copyrightContributors = this.$t('about.copyrightContributors', { year: new Date().getFullYear() })
     this.logo = MarkTextLogo
     return {
       showAboutDialog: false

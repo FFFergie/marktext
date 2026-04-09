@@ -1,8 +1,10 @@
+import { t } from '@/i18n'
+
 export const titleBarStyleOptions = [{
-  label: 'Custom',
+  label: t('pref.general.option.custom'),
   value: 'custom'
 }, {
-  label: 'Native',
+  label: t('pref.general.option.native'),
   value: 'native'
 }]
 
@@ -48,13 +50,13 @@ export const zoomOptions = [{
 }]
 
 export const fileSortByOptions = [{
-  label: 'Creation time',
+  label: t('pref.general.option.creationTime'),
   value: 'created'
 }, {
-  label: 'Modification time',
+  label: t('pref.general.option.modificationTime'),
   value: 'modified'
 }, {
-  label: 'Title',
+  label: t('pref.general.option.title'),
   value: 'title'
 }]
 

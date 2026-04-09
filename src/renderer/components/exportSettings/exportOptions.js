@@ -1,3 +1,5 @@
+import { t } from '@/i18n'
+
 export const pageSizeList = [
   {
     label: 'A3 (297mm x 420mm)',
@@ -18,44 +20,44 @@ export const pageSizeList = [
     label: 'Tabloid (17" x 11")',
     value: 'Tabloid'
   }, {
-    label: 'Custom',
+    label: t('common.custom'),
     value: 'custom'
   }
 ]
 
 export const headerFooterTypes = [
   {
-    label: 'None',
+    label: t('common.none'),
     value: 0
   }, {
-    label: 'Single cell',
+    label: t('export.option.singleCell'),
     value: 1
   }, {
-    label: 'Three cells',
+    label: t('export.option.threeCells'),
     value: 2
   }
 ]
 
 export const headerFooterStyles = [
   {
-    label: 'Default',
+    label: t('common.default'),
     value: 0
   }, {
-    label: 'Simple',
+    label: t('export.option.simple'),
     value: 1
   }, {
-    label: 'Styled',
+    label: t('export.option.styled'),
     value: 2
   }
 ]
 
 export const exportThemeList = [{
-  label: 'Academic',
+  label: t('export.theme.academic'),
   value: 'academic'
 }, {
-  label: 'GitHub (Default)',
+  label: t('export.theme.githubDefault'),
   value: 'default'
 }, {
-  label: 'Liber',
+  label: t('export.theme.liber'),
   value: 'liber'
 }]

@@ -9,7 +9,7 @@
       :class="[{ 'active': active }, { 'tabs-visible': showTabBar }, { 'frameless': titleBarStyle === 'custom' }, { 'isOsx': isOsx }]"
     >
       <div class="title" @dblclick.stop="toggleMaxmizeOnMacOS">
-        <span v-if="!filename">MarkText</span>
+        <span v-if="!filename">{{ $t('about.name') }}</span>
         <span v-else>
           <span
             v-for="(path, index) of paths"
@@ -46,13 +46,13 @@
         >
           <div slot="content">
             <div class="title-item">
-              <span class="front">Words:</span><span class="text">{{wordCount['word']}}</span>
+              <span class="front">{{ $t('common.words') }}:</span><span class="text">{{wordCount['word']}}</span>
             </div>
             <div class="title-item">
-              <span class="front">Characters:</span><span class="text">{{wordCount['character']}}</span>
+              <span class="front">{{ $t('common.characters') }}:</span><span class="text">{{wordCount['character']}}</span>
             </div>
             <div class="title-item">
-              <span class="front">Paragraphs:</span><span class="text">{{wordCount['paragraph']}}</span>
+              <span class="front">{{ $t('common.paragraphs') }}:</span><span class="text">{{wordCount['paragraph']}}</span>
             </div>
           </div>
           <div
@@ -111,19 +111,19 @@ export default {
     this.HASH = {
       word: {
         short: 'W',
-        full: 'word'
+        full: this.$t('common.word')
       },
       character: {
         short: 'C',
-        full: 'character'
+        full: this.$t('common.character')
       },
       paragraph: {
         short: 'P',
-        full: 'paragraph'
+        full: this.$t('common.paragraph')
       },
       all: {
         short: 'A',
-        full: '(with space)character'
+        full: this.$t('common.characterWithSpace')
       }
     }
     this.windowIconMinimize = minimizePath
@@ -171,9 +171,9 @@ export default {
       const hasOpenFolder = this.project && this.project.name
       let title = ''
       if (value) {
-        title = hasOpenFolder ? `${value} - ${this.project.name}` : `${value} - MarkText`
+        title = hasOpenFolder ? `${value} - ${this.project.name}` : `${value} - ${this.$t('about.name')}`
       } else {
-        title = hasOpenFolder ? this.project.name : 'MarkText'
+        title = hasOpenFolder ? this.project.name : this.$t('about.name')
       }
 
       document.title = title

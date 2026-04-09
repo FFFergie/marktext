@@ -155,7 +155,225 @@
       "clearRecent": "Clear Recent"
     }
   },
-  "pref": {},
+  "pref": {
+    "sidebar": {
+      "preferences": "Preferences",
+      "searchPreferences": "Search preferences"
+    },
+    "general": {
+      "title": "General",
+      "autoSave": {
+        "title": "Auto Save:",
+        "autoSaveChanges": "Automatically save document changes",
+        "delay": "Delay following document edit before automatically saving"
+      },
+      "window": {
+        "title": "Window:",
+        "titleBarStyle": "Title bar style",
+        "hideScrollbars": "Hide scrollbars",
+        "openFilesInNewWindow": "Open files in new window",
+        "openFoldersInNewWindow": "Open folders in new window",
+        "zoom": "Zoom"
+      },
+      "sidebar": {
+        "title": "Sidebar:",
+        "wrapTextInToc": "Wrap text in table of contents",
+        "sortField": "Sort field for files in open folders"
+      },
+      "startup": {
+        "title": "Action on startup:",
+        "openDefaultDirectory": "Open the default directory",
+        "openBlankPage": "Open a blank page"
+      },
+      "misc": {
+        "title": "Misc:",
+        "userInterfaceLanguage": "User interface language"
+      },
+      "option": {
+        "custom": "Custom",
+        "native": "Native",
+        "creationTime": "Creation time",
+        "modificationTime": "Modification time",
+        "title": "Title"
+      }
+    },
+    "editor": {
+      "title": "Editor",
+      "common": {
+        "fontSize": "Font size",
+        "lineHeight": "Line height",
+        "fontFamily": "Font family"
+      },
+      "textEditor": {
+        "title": "Text editor settings:",
+        "maxWidth": "Maximum width of text editor",
+        "maxWidthNotes": "Leave empty for theme default, otherwise use number with unit suffix, which is one of 'ch' for characters, 'px' for pixels, or '%' for percentage."
+      },
+      "codeBlock": {
+        "title": "Code block settings:",
+        "showLineNumbers": "Show line numbers",
+        "trimEmptyLines": "Remove leading and trailing empty lines"
+      },
+      "writing": {
+        "title": "Writing behavior:",
+        "autoPairBracket": "Automatically close brackets when writing",
+        "autoPairMarkdownSyntax": "Automatically complete markdown syntax",
+        "autoPairQuote": "Automatically close quotation marks"
+      },
+      "file": {
+        "title": "File representation:",
+        "preferredTabWidth": "Preferred tab width",
+        "lineSeparatorType": "Line separator type",
+        "defaultEncoding": "Default encoding",
+        "autoDetectEncoding": "Automatically detect file encoding",
+        "trailingNewline": "Handling of trailing newline characters"
+      },
+      "misc": {
+        "title": "Misc:",
+        "textDirection": "Text direction",
+        "hideQuickInsertHint": "Hide hint for selecting type of new paragraph",
+        "hideLinkPopup": "Hide popup when cursor is over link",
+        "autoCheckTask": "Whether to automatically check any related tasks"
+      },
+      "option": {
+        "crlf": "Carriage return and line feed (CRLF)",
+        "lf": "Line feed (LF)",
+        "trimAllTrailing": "Trim all trailing",
+        "ensureOneTrailing": "Ensure exactly one trailing",
+        "preserveOriginalStyle": "Preserve style of original document",
+        "doNothing": "Do nothing",
+        "leftToRight": "Left to Right",
+        "rightToLeft": "Right to Left"
+      }
+    },
+    "theme": {
+      "title": "Theme",
+      "autoAdjustWithSystem": "Automatically adjust application theme according to system settings",
+      "openThemesFolder": "Open the themes folder",
+      "importCustomThemes": "Import custom themes",
+      "importTheme": "Import Theme",
+      "option": {
+        "adjustAtStartup": "Adjust theme at startup"
+      }
+    },
+    "markdown": {
+      "title": "Markdown",
+      "lists": {
+        "title": "Lists:",
+        "preferLooseListItems": "Prefer loose list items",
+        "bulletMarker": "Preferred marker for bullet lists",
+        "orderedMarker": "Preferred marker for ordered lists",
+        "listIndentation": "Preferred list indentation"
+      },
+      "extensions": {
+        "title": "Markdown extensions:",
+        "frontMatterFormat": "Front matter format",
+        "superSubScript": "Enable Pandoc-style superscript and subscript",
+        "footnotes": "Enable Pandoc-style footnotes"
+      },
+      "compatibility": {
+        "title": "Compatibility:",
+        "htmlRendering": "Enable HTML rendering",
+        "gitlabMode": "Enable GitLab compatibility mode"
+      },
+      "diagrams": {
+        "title": "Diagrams:",
+        "sequenceTheme": "Sequence diagram theme"
+      },
+      "misc": {
+        "title": "Misc:",
+        "headingStyle": "Preferred heading style"
+      },
+      "option": {
+        "atxHeading": "ATX heading",
+        "setextHeading": "Setext heading",
+        "docfxStyle": "DocFX style",
+        "trueTabCharacter": "True tab character",
+        "singleSpaceCharacter": "Single space character",
+        "twoSpaceCharacters": "Two space characters",
+        "threeSpaceCharacters": "Three space characters",
+        "fourSpaceCharacters": "Four space characters",
+        "handDrawn": "Hand drawn",
+        "simple": "Simple"
+      }
+    },
+    "spellchecker": {
+      "title": "Spelling",
+      "enable": "Enable spell checking",
+      "hideMarks": "Hide marks for spelling errors",
+      "autoDetectLanguage": "Automatically detect document language",
+      "defaultLanguage": "Default language for spell checking",
+      "osxDescription": "The used language will be detected automatically while typing. Additional languages may be added through \"Language & Region\" in your system preferences pane.",
+      "customDictionaryTitle": "Custom dictionary:",
+      "customDictionaryDescription": "Edit words in custom dictionary.",
+      "noWords": "No words available",
+      "failedToSwitchLanguage": "Failed to switch language",
+      "failedToRemoveCustomWord": "Failed to remove custom word"
+    },
+    "image": {
+      "title": "Image",
+      "defaultAction": "Default action after an image is inserted from local folder or clipboard",
+      "clipboardSupportNote": "Clipboard handling is only fully supported on macOS and Windows.",
+      "option": {
+        "uploadToCloud": "Upload image to cloud using selected uploader (must be configured below)",
+        "copyToFolder": "Copy image to designated relative assets or global local folder",
+        "keepOriginalLocation": "Keep original location"
+      },
+      "folder": {
+        "title": "Global or relative image folder",
+        "globalImageFolder": "Global image folder",
+        "preferRelativeAssetsFolder": "Prefer relative assets folder",
+        "relativeImageFolderName": "Relative image folder name",
+        "filenamePlaceholder": "Include ${filename} in the text-box above to automatically insert the document file name."
+      },
+      "uploader": {
+        "title": "Uploader",
+        "currentUploaderIs": "The current image uploader is {name}.",
+        "noUploaderSelected": "Currently no uploader is selected. Please select an uploader and config it.",
+        "picgoMissingPrefix": "Your system does not have",
+        "picgoMissingSuffix": "installed, please install it before use.",
+        "githubDeprecated": "Github will be removed in a future version, please use picgo",
+        "githubToken": "GitHub token:",
+        "tokenStorageNotice": "The token is saved by Keychain on macOS, Secret Service API/libsecret on Linux and Credential Vault on Windows",
+        "inputToken": "Input token",
+        "ownerName": "Owner name:",
+        "ownerPlaceholder": "owner",
+        "repoName": "Repo name:",
+        "repoPlaceholder": "repo",
+        "branchNameOptional": "Branch name (optional):",
+        "branchPlaceholder": "branch",
+        "scriptDescription": "The script will be executed with the image file path as its only argument and it should output any valid value for the src attribute of a HTMLImageElement.",
+        "shellScriptLocation": "Shell script location:",
+        "scriptPathPlaceholder": "Script absolute path",
+        "saveConfigTitle": "Save Config",
+        "githubConfigSaved": "The Github configration has been saved.",
+        "scriptConfigSaved": "The command line script configuration has been saved",
+        "legalPrefix": "By using {name}, you agree to {name}'s",
+        "privacyStatement": "Privacy Statement",
+        "termsOfService": "Terms of Service",
+        "gdprNotice": "This service cannot be used in Europe due to GDPR issues."
+      }
+    },
+    "keybindings": {
+      "title": "Key Bindings",
+      "description": "Customize MarkText shortcuts and click on the save button below to apply all changes (requires a restart).",
+      "moreText": "All available and default key binding can be found",
+      "online": "online",
+      "keyCombination": "Key Combination",
+      "unbind": "Unbind",
+      "restoreDefaults": "Restore default key bindings",
+      "debugOptions": "Debug options:",
+      "dumpKeyboardInfo": "Dump keyboard information",
+      "failedToSave": "Failed to save",
+      "shortcutAlreadyInUse": "Shortcut already in use",
+      "shortcutAlreadyInUseMessage": "The shortcut \"{accelerator}\" is already in use. Please unset the shortcut and try again.",
+      "dialog": {
+        "placeholder": "Press a key combination",
+        "enterOrEsc": "Press Enter to continue or ESC to exit.",
+        "invalidKeybinding": "Current key combination cannot be bound!"
+      }
+    }
+  },
   "contextMenu": {
     "cut": "Cut",
     "copy": "Copy",
@@ -164,13 +382,263 @@
     "copyAsHtml": "Copy As Html",
     "pasteAsPlainText": "Paste as Plain Text",
     "insertParagraphBefore": "Insert Paragraph Before",
-    "insertParagraphAfter": "Insert Paragraph After"
+    "insertParagraphAfter": "Insert Paragraph After",
+    "close": "Close",
+    "closeOthers": "Close others",
+    "closeSaved": "Close saved tabs",
+    "closeAllTabs": "Close all tabs",
+    "rename": "Rename",
+    "copyPath": "Copy path",
+    "showInFolder": "Show in folder",
+    "newDirectory": "New Directory",
+    "moveToTrash": "Move To Trash"
   },
-  "command": {},
-  "about": {},
-  "search": {},
-  "commandPalette": {},
-  "export": {},
-  "notification": {},
-  "common": {}
+  "command": {
+    "mt.hide": "MarkText: Hide MarkText",
+    "mt.hide-others": "MarkText: Hide Others",
+    "file.new-window": "File: New Window",
+    "file.new-tab": "File: New Tab",
+    "file.open-file": "File: Open file",
+    "file.open-folder": "File: Open Folder",
+    "file.save": "File: Save",
+    "file.save-as": "File: Save As...",
+    "file.move-file": "File: Move...",
+    "file.rename-file": "File: Rename...",
+    "file.quick-open": "File: Show quick open dialog",
+    "file.print": "File: Print current Tab",
+    "file.preferences": "MarkText: Preferences",
+    "file.close-tab": "File: Close current Tab",
+    "file.close-window": "File: Close Window",
+    "file.quit": "MarkText: Quit",
+    "edit.undo": "Edit: Undo",
+    "edit.redo": "Edit: Redo",
+    "edit.cut": "Edit: Cut",
+    "edit.copy": "Edit: Copy",
+    "edit.paste": "Edit: Paste",
+    "edit.copy-as-markdown": "Edit: Copy as Markdown",
+    "edit.copy-as-html": "Edit: Copy as HTML",
+    "edit.paste-as-plaintext": "Edit: Paste as Plain Text",
+    "edit.select-all": "Edit: Select All",
+    "edit.duplicate": "Edit: Duplicate",
+    "edit.create-paragraph": "Edit: Create Paragraph",
+    "edit.delete-paragraph": "Edit: Delete Paragraph",
+    "edit.find": "Edit: Find",
+    "edit.find-next": "Edit: Find Next",
+    "edit.find-previous": "Edit: Find Previous",
+    "edit.replace": "Edit: Replace",
+    "edit.find-in-folder": "Edit: Find in Folder",
+    "edit.screenshot": "Edit: Make Screenshot",
+    "paragraph.heading-1": "Paragraph: Transform into Heading 1",
+    "paragraph.heading-2": "Paragraph: Transform into Heading 2",
+    "paragraph.heading-3": "Paragraph: Transform into Heading 3",
+    "paragraph.heading-4": "Paragraph: Transform into Heading 4",
+    "paragraph.heading-5": "Paragraph: Transform into Heading 5",
+    "paragraph.heading-6": "Paragraph: Transform into Heading 6",
+    "paragraph.upgrade-heading": "Paragraph: Upgrade Heading",
+    "paragraph.degrade-heading": "Paragraph: Degrade Heading",
+    "paragraph.table": "Paragraph: Create Table",
+    "paragraph.code-fence": "Paragraph: Transform into Code Fence",
+    "paragraph.quote-block": "Paragraph: Transform into Quote Block",
+    "paragraph.math-formula": "Paragraph: Transform into Math Formula",
+    "paragraph.html-block": "Paragraph: Transform into HTML Block",
+    "paragraph.order-list": "Paragraph: Transform into Order List",
+    "paragraph.bullet-list": "Paragraph: Transform into Bullet List",
+    "paragraph.task-list": "Paragraph: Transform into Task List",
+    "paragraph.loose-list-item": "Paragraph: Convert to Loose List Item",
+    "paragraph.paragraph": "Paragraph: Create new Paragraph",
+    "paragraph.horizontal-line": "Paragraph: Insert Horizontal Line",
+    "paragraph.front-matter": "Paragraph: Insert Front Matter",
+    "format.strong": "Format: Strong",
+    "format.emphasis": "Format: Emphasis",
+    "format.underline": "Format: Underline",
+    "format.superscript": "Format: Superscript",
+    "format.subscript": "Format: Subscript",
+    "format.highlight": "Format: Highlight",
+    "format.inline-code": "Format: Inline Code",
+    "format.inline-math": "Format: Inline Math",
+    "format.strike": "Format: Strike",
+    "format.hyperlink": "Format: Hyperlink",
+    "format.image": "Format: Insert Image",
+    "format.clear-format": "Format: Clear Format",
+    "window.minimize": "Window: Minimize",
+    "window.toggle-always-on-top": "Window: Always on Top",
+    "window.zoom-in": "Window: Zoom In",
+    "window.zoom-out": "Window: Zoom Out",
+    "window.toggle-full-screen": "Window: Toggle Full Screen",
+    "view.command-palette": "View: Show Command Palette",
+    "view.source-code-mode": "View: Toggle Source Code Mode",
+    "view.typewriter-mode": "View: Toggle Typewriter Mode",
+    "view.focus-mode": "View: Focus Mode",
+    "view.toggle-sidebar": "View: Toggle Sidebar",
+    "view.toggle-toc": "View: Toggle Table of Content",
+    "view.toggle-tabbar": "View: Toggle Tabs",
+    "view.toggle-dev-tools": "View: Show Developer Tools (Debug)",
+    "view.dev-reload": "View: Reload Window (Debug)",
+    "tabs.cycle-forward": "Misc: Cycle Tabs Forward",
+    "tabs.cycle-backward": "Misc: Cycle Tabs Backward",
+    "tabs.switch-to-left": "Misc: Switch tab to the left",
+    "tabs.switch-to-right": "Misc: Switch tab to the right",
+    "tabs.switch-to-first": "Misc: Switch tab to the 1st",
+    "tabs.switch-to-second": "Misc: Switch tab to the 2st",
+    "tabs.switch-to-third": "Misc: Switch tab to the 3st",
+    "tabs.switch-to-fourth": "Misc: Switch tab to the 4st",
+    "tabs.switch-to-fifth": "Misc: Switch tab to the 5st",
+    "tabs.switch-to-sixth": "Misc: Switch tab to the 6st",
+    "tabs.switch-to-seventh": "Misc: Switch tab to the 7st",
+    "tabs.switch-to-eighth": "Misc: Switch tab to the 8st",
+    "tabs.switch-to-ninth": "Misc: Switch tab to the 9st",
+    "tabs.switch-to-tenth": "Misc: Switch tab to the 10st",
+    "view.reload-images": "View: Force reload images",
+    "file.toggle-auto-save": "File: Toggle Auto Save",
+    "file.import-file": "File: Import...",
+    "file.export-file": "File: Export...",
+    "file.zoom": "Window: Zoom...",
+    "file.check-update": "MarkText: Check for Updates...",
+    "paragraph.reset-paragraph": "Paragraph: Transform into Paragraph",
+    "window.change-theme": "Theme: Change Theme...",
+    "view.text-direction": "View: Set Text Direction",
+    "docs.user-guide": "MarkText: End User Guide",
+    "docs.markdown-syntax": "MarkText: Markdown Syntax Guide"
+  },
+  "about": {
+    "name": "MarkText",
+    "copyright": "Copyright © 2017-{year} Luo Ran",
+    "copyrightContributors": "Copyright © 2018-{year} MarkText Contributors"
+  },
+  "search": {
+    "searchPlaceholder": "Search",
+    "searchInFolderPlaceholder": "Search in folder...",
+    "replacementPlaceholder": "Replacement",
+    "caseSensitive": "Case Sensitive",
+    "wholeWord": "Select whole word",
+    "useRegex": "Use query as RegEx",
+    "replaceAll": "Replace All",
+    "replaceSingle": "Replace Single",
+    "noFolderOpen": "No folder open",
+    "noResultsFound": "No results found.",
+    "invalidRegex": "Invalid regular expression: /{value}/.",
+    "regexMatchEmpty": "RegExp: /{value}/ match empty string.",
+    "limitToHundredFiles": "Search was limited to 100 files.",
+    "resultInfo": "{matchCount} matches in {fileCount} files"
+  },
+  "commandPalette": {
+    "placeholder": "Type a command to execute"
+  },
+  "export": {
+    "title": "Export Options",
+    "info": "Please customize the page appearance and click on \"export\" to continue.",
+    "tab": {
+      "info": "Info",
+      "page": "Page",
+      "style": "Style",
+      "theme": "Theme",
+      "headerFooter": "Header & Footer",
+      "toc": "Table of Contents"
+    },
+    "page": {
+      "pageTitle": "The page title:",
+      "pageSize": "Page size:",
+      "widthHeightMm": "Width/Height in mm:",
+      "landscape": "Landscape orientation:",
+      "marginMm": "Page margin in mm:",
+      "topBottom": "Top/Bottom:",
+      "leftRight": "Left/Right:"
+    },
+    "style": {
+      "overwriteFontSettings": "Overwrite theme font settings:",
+      "fontFamily": "Font family:",
+      "fontSize": "Font size",
+      "lineHeight": "Line height",
+      "autoNumberingHeadings": "Auto numbering headings:",
+      "showFrontMatter": "Show front matter:"
+    },
+    "theme": {
+      "description": "You can change the document appearance by choosing a theme or create a handcrafted one.",
+      "label": "Theme:",
+      "academic": "Academic",
+      "githubDefault": "GitHub (Default)",
+      "liber": "Liber"
+    },
+    "headerFooter": {
+      "description": "The text appear on all pages if header and/or footer is defined.",
+      "headerType": "Header type:",
+      "leftHeaderText": "The left header text:",
+      "mainHeaderText": "The main header text:",
+      "rightHeaderText": "The right header text:",
+      "footerType": "Footer type:",
+      "leftFooterText": "The left footer text:",
+      "mainFooterText": "The main footer text:",
+      "rightFooterText": "The right footer text:",
+      "customizeStyle": "Customize style:",
+      "allowStyled": "Allow styled header and footer:",
+      "fontSize": "Header and footer font size"
+    },
+    "toc": {
+      "includeTopHeading": "Include top heading:",
+      "includeTopHeadingDetail": "Includes the first heading level too."
+    },
+    "option": {
+      "singleCell": "Single cell",
+      "threeCells": "Three cells",
+      "simple": "Simple",
+      "styled": "Styled"
+    }
+  },
+  "notification": {
+    "uploadImageTitle": "Upload Image",
+    "unableToSwitchLanguage": "Unable to switch to language \"{languageCode}\". Requested language dictionary is missing.",
+    "switchLanguageError": "Error while switching to \"{languageCode}\": {error}",
+    "printExportFailed": "Printing/Exporting failed",
+    "printExportFailedWithTarget": "Printing/Exporting {target} failed",
+    "exportSomethingWrong": "There is something wrong when exporting.",
+    "exportTargetFailed": "There is something wrong when export {target}.",
+    "printTargetFailed": "There is something wrong when print {target}."
+  },
+  "common": {
+    "requiresRestart": "Requires restart.",
+    "selectFolder": "Select Folder",
+    "openFolder": "Open Folder",
+    "open": "Open",
+    "save": "Save",
+    "saveAll": "Save All",
+    "closeAll": "Close All",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "custom": "Custom",
+    "none": "None",
+    "default": "Default",
+    "title": "Title:",
+    "export": "Export",
+    "and": "and",
+    "word": "word",
+    "words": "Words",
+    "character": "character",
+    "characters": "Characters",
+    "paragraph": "paragraph",
+    "paragraphs": "Paragraphs",
+    "characterWithSpace": "(with space)character",
+    "options": "Options",
+    "edit": "Edit",
+    "reset": "Reset",
+    "delete": "Delete",
+    "showInFolder": "Show in Folder",
+    "newFile": "New File",
+    "emptyProject": "Empty project",
+    "createFile": "Create File",
+    "openedFiles": "Opened files",
+    "importOrOpen": "Import or Open",
+    "dropFilesToImport": "Drop here to get your stuff into MarkText",
+    "tableOfContents": "Table Of Contents",
+    "insertTable": "Insert Table",
+    "rows": "Rows",
+    "columns": "Columns",
+    "description": "Description",
+    "unexpectedErrorWhileSaving": "An unexpected error occurred while saving.",
+    "feedbackViaTweet": "Send us feedback via tweet",
+    "experienceFeeling": "What's your experience feeling?",
+    "tellUsFeedback": "Tell us your feedback?",
+    "reportBugOrFeature": "Report bug or feature request via github",
+    "tweet": "Tweet",
+    "never": "Never"
+  }
 }

@@ -65,7 +65,7 @@ export default {
   },
   data () {
     this.currentCommand = null
-    this.defaultPlaceholderText = 'Type a command to execute'
+    this.defaultPlaceholderText = this.$t('commandPalette.placeholder')
     return {
       showCommandPalette: false,
       placeholderText: this.defaultPlaceholderText,

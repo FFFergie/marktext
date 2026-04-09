@@ -18,8 +18,8 @@
           <div class="img-wrapper">
             <img :src="`${importIcon.url}`" alt="import file">
           </div>
-          <div>Import or Open</div>
-          <p> Drop here to get you stuff into MarkText</p>
+          <div>{{ $t('common.importOrOpen') }}</div>
+          <p>{{ $t('common.dropFilesToImport') }}</p>
         </div>
         <div class="file-list">
           <div>.md</div>

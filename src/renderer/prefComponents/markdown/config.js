@@ -1,3 +1,5 @@
+import { t } from '@/i18n'
+
 export const bulletListMarkerOptions = [{
   label: '*',
   value: '*'
@@ -18,30 +20,30 @@ export const orderListDelimiterOptions = [{
 }]
 
 export const preferHeadingStyleOptions = [{
-  label: 'ATX heading',
+  label: t('pref.markdown.option.atxHeading'),
   value: 'atx'
 }, {
-  label: 'Setext heading',
+  label: t('pref.markdown.option.setextHeading'),
   value: 'setext'
 }]
 
 export const listIndentationOptions = [{
-  label: 'DocFX style',
+  label: t('pref.markdown.option.docfxStyle'),
   value: 'dfm'
 }, {
-  label: 'True tab character',
+  label: t('pref.markdown.option.trueTabCharacter'),
   value: 'tab'
 }, {
-  label: 'Single space character',
+  label: t('pref.markdown.option.singleSpaceCharacter'),
   value: 1
 }, {
-  label: 'Two space characters',
+  label: t('pref.markdown.option.twoSpaceCharacters'),
   value: 2
 }, {
-  label: 'Three space characters',
+  label: t('pref.markdown.option.threeSpaceCharacters'),
   value: 3
 }, {
-  label: 'Four space characters',
+  label: t('pref.markdown.option.fourSpaceCharacters'),
   value: 4
 }]
 
@@ -60,9 +62,9 @@ export const frontmatterTypeOptions = [{
 }]
 
 export const sequenceThemeOptions = [{
-  label: 'Hand drawn',
+  label: t('pref.markdown.option.handDrawn'),
   value: 'hand'
 }, {
-  label: 'Simple',
+  label: t('pref.markdown.option.simple'),
   value: 'simple'
 }]
