@@ -498,7 +498,9 @@
     "window.change-theme": "Theme: Change Theme...",
     "view.text-direction": "View: Set Text Direction",
     "docs.user-guide": "MarkText: End User Guide",
-    "docs.markdown-syntax": "MarkText: Markdown Syntax Guide"
+    "docs.markdown-syntax": "MarkText: Markdown Syntax Guide",
+    "file.export-file-html": "HTML",
+    "file.export-file-pdf": "PDF"
   },
   "about": {
     "name": "MarkText",
@@ -677,6 +679,14 @@
     },
     "copyButton": {
       "copyContent": "Copy content"
+    },
+    "tableTools": {
+      "insertRowAbove": "Insert Row Above",
+      "insertRowBelow": "Insert Row Below",
+      "removeRow": "Remove Row",
+      "insertColumnLeft": "Insert Column Left",
+      "insertColumnRight": "Insert Column Right",
+      "removeColumn": "Remove Column"
     }
   },
   "notification": {
@@ -734,6 +744,7 @@
     "tellUsFeedback": "Tell us your feedback?",
     "reportBugOrFeature": "Report bug or feature request via github",
     "tweet": "Tweet",
-    "never": "Never"
+    "never": "Never",
+    "selectFont": "Select font..."
   }
 }

@@ -498,7 +498,9 @@
     "window.change-theme": "主题：切换主题...",
     "view.text-direction": "视图：设置文字方向",
     "docs.user-guide": "MarkText：最终用户指南",
-    "docs.markdown-syntax": "MarkText：Markdown 语法指南"
+    "docs.markdown-syntax": "MarkText：Markdown 语法指南",
+    "file.export-file-html": "HTML",
+    "file.export-file-pdf": "PDF"
   },
   "about": {
     "name": "MarkText",
@@ -677,6 +679,14 @@
     },
     "copyButton": {
       "copyContent": "复制内容"
+    },
+    "tableTools": {
+      "insertRowAbove": "在上方插入行",
+      "insertRowBelow": "在下方插入行",
+      "removeRow": "删除行",
+      "insertColumnLeft": "在左侧插入列",
+      "insertColumnRight": "在右侧插入列",
+      "removeColumn": "删除列"
     }
   },
   "notification": {
@@ -734,6 +744,7 @@
     "tellUsFeedback": "告诉我们你的反馈？",
     "reportBugOrFeature": "通过 Github 报告问题或功能请求",
     "tweet": "发推文",
-    "never": "从不"
+    "never": "从不",
+    "selectFont": "选择字体..."
   }
 }

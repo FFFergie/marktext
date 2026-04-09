@@ -5,6 +5,7 @@ import bus from '../bus'
 import { delay, isOsx } from '@/util'
 import { isUpdatable } from './utils'
 import getCommandDescriptionById from './descriptions'
+import { t } from '@/i18n'
 
 export { default as FileEncodingCommand } from './fileEncoding'
 export { default as LineEndingCommand } from './lineEnding'
@@ -111,14 +112,14 @@ const commands = [
     id: 'file.export-file',
     subcommands: [{
       id: 'file.export-file-html',
-      description: 'HTML',
+      description: t('command.file.export-file-html'),
       execute: async () => {
         await delay(50)
         bus.$emit('showExportDialog', 'styledHtml')
       }
     }, {
       id: 'file.export-file-pdf',
-      description: 'PDF',
+      description: t('command.file.export-file-pdf'),
       execute: async () => {
         await delay(50)
         bus.$emit('showExportDialog', 'pdf')
@@ -529,27 +530,27 @@ const commands = [
     id: 'window.change-theme',
     subcommands: [{
       id: 'window.change-theme-light',
-      description: 'Cadmium Light',
+      description: t('menu.theme.cadmiumLight'),
       value: 'light'
     }, {
       id: 'window.change-theme-dark',
-      description: 'Dark',
+      description: t('menu.theme.dark'),
       value: 'dark'
     }, {
       id: 'window.change-theme-graphite',
-      description: 'Graphite',
+      description: t('menu.theme.graphiteLight'),
       value: 'graphite'
     }, {
       id: 'window.change-theme-material-dark',
-      description: 'Material Dark',
+      description: t('menu.theme.materialDark'),
       value: 'material-dark'
     }, {
       id: 'window.change-theme-one-dark',
-      description: 'One Dark',
+      description: t('menu.theme.oneDark'),
       value: 'one-dark'
     }, {
       id: 'window.change-theme-ulysses',
-      description: 'Ulysses',
+      description: t('menu.theme.ulyssesLight'),
       value: 'ulysses'
     }],
     executeSubcommand: async (_, theme) => {
@@ -595,11 +596,11 @@ const commands = [
     id: 'view.text-direction',
     subcommands: [{
       id: 'view.text-direction-ltr',
-      description: 'Left to Right',
+      description: t('pref.editor.option.leftToRight'),
       value: 'ltr'
     }, {
       id: 'view.text-direction-rtl',
-      description: 'Right to Left',
+      description: t('pref.editor.option.rightToLeft'),
       value: 'rtl'
     }],
     executeSubcommand: async (_, value) => {

@@ -1,32 +1,34 @@
+import { t } from '../../../../renderer/i18n'
+
 export const toolList = {
   left: [{
-    label: 'Insert Row Above',
+    label: t('muya.tableTools.insertRowAbove'),
     action: 'insert',
     location: 'previous',
     target: 'row'
   }, {
-    label: 'Insert Row Below',
+    label: t('muya.tableTools.insertRowBelow'),
     action: 'insert',
     location: 'next',
     target: 'row'
   }, {
-    label: 'Remove Row',
+    label: t('muya.tableTools.removeRow'),
     action: 'remove',
     location: 'current',
     target: 'row'
   }],
   bottom: [{
-    label: 'Insert Column Left',
+    label: t('muya.tableTools.insertColumnLeft'),
     action: 'insert',
     location: 'left',
     target: 'column'
   }, {
-    label: 'Insert Column Right',
+    label: t('muya.tableTools.insertColumnRight'),
     action: 'insert',
     location: 'right',
     target: 'column'
   }, {
-    label: 'Remove Column',
+    label: t('muya.tableTools.removeColumn'),
     action: 'remove',
     location: 'current',
     target: 'column'
