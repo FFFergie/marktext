@@ -167,5 +167,6 @@ jobs:
           name: windows-build
           path: |
             build/marktext-setup.exe
+            build/marktext-portable.exe
             build/marktext-ia32-win.zip
             build/marktext-x64-win.zip

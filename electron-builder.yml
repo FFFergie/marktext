@@ -93,6 +93,8 @@ win:
     arch: [ia32, x64]
   - target: "zip"
     arch: [ia32, x64]
+  - target: "portable"
+    arch: [x64]
   requestedExecutionLevel: "asInvoker"
 nsis:
   artifactName: "marktext-setup.${ext}"
@@ -100,6 +102,8 @@ nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
   include: "resources/windows/installer.nsh"
+portable:
+  artifactName: "marktext-portable.${ext}"
 linux:
   artifactName: "marktext-${arch}.${ext}"
   executableName: "marktext"

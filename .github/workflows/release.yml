@@ -175,5 +175,6 @@ jobs:
       - name: Calculate checksums
         run: |
           get-filehash -Algorithm SHA256 "build\marktext-setup.exe"
+          get-filehash -Algorithm SHA256 "build\marktext-portable.exe"
           get-filehash -Algorithm SHA256 "build\marktext-*-win.zip"
         shell: pwsh
